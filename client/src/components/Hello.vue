@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    <FbButton></FbButton>
+    <div class="col-md-6">
+      <FbButton></FbButton>
+    </div>
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>

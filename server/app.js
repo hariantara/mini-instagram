@@ -9,6 +9,7 @@ var cors = require('cors')
 var index = require('./routes/index');
 var users = require('./routes/users');
 var files = require('./routes/file');
+var fbLogin = require('./routes/fblogin')
 
 var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/miniinstagram');
@@ -30,6 +31,7 @@ app.use(cors())
 app.use('/', index);
 app.use('/users', users);
 app.use('/files', files)
+app.use('/fb', fbLogin)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
